@@ -6,7 +6,8 @@
        
  //Code for blinking LED
  
-import RPi.GPIO as GPIO import time
+import RPi.GPIO as GPIO 
+import time
 LED = 40
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD) 
@@ -25,15 +26,17 @@ buzzer = Buzzer(15)
 button = Button(21)	
 lights = TrafficLights(25, 8, 7)	
 while True:
-  button.wait_for_press() buzzer.on()   
+  button.wait_for_press() 
+  buzzer.on()   
   light.green() 
   sleep(3)
   lights.amber.on() 
   sleep(1) 
   lights.red.on()
   sleep(3)	
-  lights.off() buzzer.off()
-  Footer
+  lights.off() 
+  buzzer.off()
+  
 
 
       
